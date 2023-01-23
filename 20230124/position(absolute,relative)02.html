@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>포지션속성 연습</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .parent {
+        margin: 100px;
+        width: 400px;
+        height: 300px;
+        background-color: aqua;
+        position: relative;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        bottom: -50px; /* 자신의 반만큼 부모요소를 초과하여 밑으로 이동 */
+        left: 50%; /* 반만큼 이동 */
+        transform: translatex(
+          -50%
+        ); /* .parent크기가 변화해도 일정하게 가운데 유지 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
