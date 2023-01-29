@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>파라미터 연습하기</title>
+    <link rel="stylesheet" href="../20230125/파라미터연습.css" />
+  </head>
+  <body>
+    <div class="alert-box" id="alert">
+      <p id="title">알림창입니다</p>
+      <button id="close">닫기</button>
+    </div>
+
+    <button onclick="아이디알림창()">버튼1</button>
+    <button onclick="비번알림창()">버튼2</button>
+
+    <script>
+      document.getElementById("alert").addEventListener("click", function () {
+        document.getElementById("alert").style.display = "none";
+      });
+
+      function 알림창열기(구멍) {
+        document.getElementById("alert").style.display = 구멍;
+      }
+    </script>
+  </body>
+</html>
