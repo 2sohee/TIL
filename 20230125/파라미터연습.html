@@ -7,14 +7,26 @@
   </head>
   <body>
     <div class="alert-box" id="alert">
-      알림창입니다
+      <p id="title">알림창입니다</p>
       <button onclick="알림창열기('none')">닫기</button>
     </div>
-    <button onclick="알림창열기('block')">버튼</button>
+
+    <button onclick="아이디알림창()">버튼1</button>
+    <button onclick="비번알림창()">버튼2</button>
 
     <script>
-      function 알림창열기() {
-        document.getElementById("alert").style.display;
+      function 아이디알림창() {
+        // p태그 내용을 아이디입력으로 바꿈
+        document.getElementById("title").innerHTML = "아이디입력하세요";
+        // 2. 띄움
+        document.getElementById("alert").style.display = "block";
+      }
+
+      function 비번알림창() {
+        // p태그 내용을 비번입력으로 바꿈
+        document.getElementById("title").innerHTML = "비번입력하세요";
+        // 2. 띄움
+        document.getElementById("alert").style.display = "block";
       }
     </script>
   </body>
