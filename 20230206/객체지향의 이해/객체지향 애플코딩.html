@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 캐릭터마다 정보(특징)가 다 다른데 {} <= object형으로 정리하려고 하면
+var a = {name : 어쩌구} 이런 형식으로 몇백개를 만들어야하니 코드가 너무 길어짐
+
+그래서 비슷한 구조의 object를 쉽게 만들기 위해 class 문법이 나옴 = class는 object를 뽑는 기계다.
+
+
+ var nunu = {
+    q : 'consume'
+    w : 'snowball'
+ }
+
+ var garen = {
+    q : 'strike'
+    w : 'courage'
+ }
+
+ 이 오브젝트를 function을 사용해서 class 문법으로 만들기  */
+
+      /* this 란?
+- 기계로부터 생성되는 object 들을 의미 = instance
+*/
+
+      function 기계(구멍) {
+        //constructor
+        this.q = 구멍; // this가 있으면 class 역할을 대신해줄 수 있음
+        this.w = "snowball"; // '새로 생성되는 오브젝트의 w키에는 snowball을 할당해라' 라는 의미
+      }
+      //기계로부터 새로운 오브젝트를 뽑고 싶을 때는
+      var nunu = new 기계(); // 이 자리에 오브젝트가 남게됨
+      var garen = new 기계("strike"); // 이렇게 구멍에 넣어주면 garen은 q: 'strike', w: 'snowball' 이 됨.
+
+      //위 과정을 상속받는다고 함 (부모-자식)
+
+      // es6 calss 최신 문법으로 만들기
+
+      class Hero {
+        constructor() {
+          this.q = 구멍;
+          this.w = "snowball";
+        }
+      }
+      new Hero(); // =>이렇게 하면 오브젝트가 생성되게 됨
+    </script>
+  </body>
+</html>
